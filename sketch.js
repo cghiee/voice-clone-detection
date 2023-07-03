@@ -20,7 +20,10 @@ let soundModelURL =
   "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
 function setup() {
-  createCanvas(320, 240);
+  const canvasWidth = windowWidth * 0.8; // 80% of window width
+  const canvasHeight = windowHeight * 0.4; // 40% of window height
+
+  createCanvas(canvasWidth, canvasHeight);
   background(0);
 
   // Load the model
@@ -132,8 +135,12 @@ function gotResult(error, results) {
   }
 }
 
-// Resize the progress bar when the window size changes
+// Resize the canvas and progress bar when the window size changes
 function windowResized() {
-  progressBarHeight = windowHeight * 0.2; // Updated height
-  resizeCanvas(windowWidth, windowHeight);
+  const canvasWidth = windowWidth * 0.8; // 80% of window width
+  const canvasHeight = windowHeight * 0.4; // 40% of window height
+
+  resizeCanvas(canvasWidth, canvasHeight);
+
+  progressBarHeight = canvasHeight * 0.2; // Updated height
 }
