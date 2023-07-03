@@ -1,5 +1,5 @@
 // Global variable to store the classifier
-let classifier; 
+let classifier;
 
 // Array to store the last 5 classification values
 let classificationHistory = [];
@@ -20,7 +20,7 @@ let soundModelURL =
   "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
 function setup() {
-  const canvasWidth = windowWidth * 0.8; // 80% of window width
+  const canvasWidth = windowWidth * 0.9; // 90% of window width
   const canvasHeight = windowHeight * 0.4; // 40% of window height
 
   createCanvas(canvasWidth, canvasHeight);
@@ -137,7 +137,7 @@ function gotResult(error, results) {
 
 // Resize the canvas and progress bar when the window size changes
 function windowResized() {
-  const canvasWidth = windowWidth * 0.8; // 80% of window width
+  const canvasWidth = windowWidth * 0.9; // 90% of window width
   const canvasHeight = windowHeight * 0.4; // 40% of window height
 
   resizeCanvas(canvasWidth, canvasHeight);
