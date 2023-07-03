@@ -19,6 +19,7 @@ let progressBarPixels = [];
 
 // Teachable Machine model URL:
 let soundModelURL = 'https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json';
+//change the above line to reflect your trained classifier - see teachable machine google
 
 function preload() {
   // Load the model
