@@ -13,7 +13,7 @@ let label = "listening";
 let progressBarX = 0;
 let progressBarY = 0;
 let progressBarHeight = 90;
-let progressBarWidth = 4;
+let progressBarWidth = 8;
 let progressBarDefaultColor = [200, 200, 200];
 let progressBarPixels = [];
 
@@ -21,6 +21,11 @@ let progressBarPixels = [];
 let soundModelURL =
   "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
+function initial_canvas() {
+  createCanvas(320, 240);
+  background(0);
+
+}
 
 function preload() {
   // Load the model
@@ -103,9 +108,9 @@ function gotResult(error, results) {
     if (label === "fake") {
       progressBarColor = [255, 0, 0]; // Red
     } else if (label === "real") {
-      progressBarColor = [0, 255, 0]; // Green
+      progressBarColor = [0, 240, 0]; // Green
     } else if (label === "Background Noise") {
-      progressBarColor = [173, 216, 230]; // Light Blue
+      progressBarColor = [193, 236, 240]; // Light Blue
     }
 
     // Add the new set of pixels to the progress bar pixels array
