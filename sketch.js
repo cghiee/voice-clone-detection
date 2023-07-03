@@ -1,5 +1,3 @@
-//https://editor.p5js.org/ml5/sketches/SoundModel_TM
-
 // Global variable to store the classifier
 let classifier;
 
@@ -21,19 +19,15 @@ let progressBarPixels = [];
 let soundModelURL =
   "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
-function initial_canvas() {
-  createCanvas(320, 240);
+function setup() {
+  createCanvas(windowWidth * 0.8, windowHeight * 0.8);
   background(0);
 
-}
-
-function preload() {
   // Load the model
-  classifier = ml5.soundClassifier(soundModelURL);
+  classifier = ml5.soundClassifier(soundModelURL, modelLoaded);
 }
 
-function setup() {
-  createCanvas(320, 240);
+function modelLoaded() {
   // Start classifying
   // The sound model will continuously listen to the microphone
   classifier.classify(gotResult);
@@ -136,4 +130,9 @@ function gotResult(error, results) {
       progressBarPixels.shift();
     }
   }
+}
+
+// Resize canvas when the window size changes
+function windowResized() {
+  resizeCanvas(windowWidth * 0.8, windowHeight * 0.8);
 }
