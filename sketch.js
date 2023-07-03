@@ -1,5 +1,5 @@
 // Global variable to store the classifier
-let classifier;
+let classifier; 
 
 // Array to store the last 5 classification values
 let classificationHistory = [];
