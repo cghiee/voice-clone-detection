@@ -10,7 +10,7 @@ let label = "listening";
 // Progress bar variables
 let progressBarX = 0;
 let progressBarY = 0;
-let progressBarHeight = 90;
+let progressBarHeight = 90; // Updated height
 let progressBarWidth = 8;
 let progressBarDefaultColor = [200, 200, 200];
 let progressBarPixels = [];
@@ -20,7 +20,7 @@ let soundModelURL =
   "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
 function setup() {
-  createCanvas(windowWidth * 0.8, windowHeight * 0.8);
+  createCanvas(320, 240);
   background(0);
 
   // Load the model
@@ -132,7 +132,8 @@ function gotResult(error, results) {
   }
 }
 
-// Resize canvas when the window size changes
+// Resize the progress bar when the window size changes
 function windowResized() {
-  resizeCanvas(windowWidth * 0.8, windowHeight * 0.8);
+  progressBarHeight = windowHeight * 0.2; // Updated height
+  resizeCanvas(windowWidth, windowHeight);
 }
