@@ -21,10 +21,6 @@ let progressBarPixels = [];
 let soundModelURL =
   "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
-function initial_canvas() {
-  createCanvas(320, 240);
-  background(0);
-}
 
 function preload() {
   // Load the model
