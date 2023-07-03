@@ -4,8 +4,8 @@ This repository contains software for detecting voice clones. It utilizes the Pl
 
 ## Features
 
-- Voice clone detection using Play.ht API
-- Training a classifier using Teachable Machine
+- Voice clone generation using Play.ht API
+- Training a classifier using Teachable Machine, exported to p5.js
 - Webpage for live detection
 
 ## Installation
