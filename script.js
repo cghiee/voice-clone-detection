@@ -18,8 +18,8 @@ let progressBarDefaultColor = [200, 200, 200];
 let progressBarPixels = [];
 
 // Teachable Machine model URL:
-let soundModelURL = 'https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json';
-//change the above line to reflect your trained classifier - see teachable machine google
+let soundModelURL =
+  "https://teachablemachine.withgoogle.com/models/oGM6Id9rB/model.json";
 
 function preload() {
   // Load the model
@@ -98,20 +98,20 @@ function gotResult(error, results) {
     }
 
     // Update the progress bar color based on the label
-let progressBarColor;
-if (label === "fake") {
-  progressBarColor = [255, 0, 0]; // Red
-} else if (label === "real") {
-  progressBarColor = [0, 255, 0]; // Green
-} else if (label === "Background Noise") {
-  progressBarColor = [173, 216, 230]; // Light Blue
-}
+    let progressBarColor;
+    if (label === "fake") {
+      progressBarColor = [255, 0, 0]; // Red
+    } else if (label === "real") {
+      progressBarColor = [0, 255, 0]; // Green
+    } else if (label === "Background Noise") {
+      progressBarColor = [173, 216, 230]; // Light Blue
+    }
 
     // Add the new set of pixels to the progress bar pixels array
     progressBarPixels.push({
       x: progressBarX,
       y: height - progressBarHeight,
-      color: progressBarColor
+      color: progressBarColor,
     });
 
     // Reset the classification history array
