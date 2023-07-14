@@ -22,3 +22,7 @@ To use this software, follow the instructions below:
 ```bash
 git clone https://github.com/cghiee/voice-clone-detection.git
 
+## Reference
+https://appinventor.mit.edu/assets/files/voice-authentication-app-tutorial.pdf
+
+
